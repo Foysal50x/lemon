@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+echo "Fixing code style with Laravel Pint and ESLint..."
+npx lint-staged
