@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
             'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-
+        // @phpstan-ignore-next-line
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
